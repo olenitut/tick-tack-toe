@@ -1,6 +1,6 @@
 # Tick-tack-toe
 
-[DEMO](https://hordieieva-tick-tack-toe.netlify.app/")
+[DEMO](https://hordieieva-tick-tack-toe.netlify.app/)
 
 ### Technologies
 
