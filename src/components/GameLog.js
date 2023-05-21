@@ -24,7 +24,7 @@ const GameLog = () => {
             onClick={() => reverseToClicked(log.id)}
             key={log.id}
             className="game__log"
-          >{`Player ${log.player} made a move on square ${log.move}`}</p>
+          >{`Player ${log.player} made a move on square ${log.move + 1}`}</p>
         );
       })}
     </div>
