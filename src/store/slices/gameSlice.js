@@ -70,6 +70,7 @@ const gameSlice = createSlice({
       state.board = state.steps[id].board;
       state.message = null;
       state.isPlaying = true;
+      state.player = state.steps[id].player;
     },
     restart(state) {
       state.board = initialBoard;
