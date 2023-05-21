@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from "react-redux";
+
+import Board from "./components/Board";
+import GameLog from "./components/GameLog";
+import Header from "./components/Header";
+import Controls from "./components/Controls";
+import store from "./store/store";
+
+import "./styles/main.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="game">
+        <Header />
+        <main className="game__main">
+          <div>
+            <Board />
+            <Controls />
+          </div>
+          <GameLog />
+        </main>
+      </div>
+    </Provider>
   );
 }
 
 export default App;
+
+// current player box
+// normal styles

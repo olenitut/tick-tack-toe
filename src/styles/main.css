@@ -1,0 +1,97 @@
+.game {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.game__header {
+  color: #333;
+}
+.game__message {
+  border: 1px solid #333;
+  background: wheat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.game__fill {
+  height: 30px;
+}
+.game__main {
+  display: flex;
+  gap: 50px;
+  margin-top: 20px;
+}
+@media (max-width: 700px) {
+  .game__main {
+    flex-direction: column;
+  }
+}
+.game__square {
+  height: 100px;
+  width: 100px;
+  background-color: #444;
+  border: 1px solid wheat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: wheat;
+  font-size: 80px;
+  line-height: 100%;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.game__square:hover {
+  background-color: #555;
+  transform: scale(1.03);
+}
+.game__board {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.game__current-player {
+  background-color: wheat;
+  border: 2px solid #333;
+  padding: 10px;
+  text-align: center;
+  color: #333;
+  margin-top: 0;
+  width: 80%;
+}
+.game__logs {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.game__log {
+  padding: 10px;
+  border-bottom: 2px solid #888;
+  margin: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.game__log:hover {
+  transform: scale(1.05);
+}
+.game__restart {
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: wheat;
+  color: #333;
+  transition: 0.3s;
+}
+.game__restart:hover {
+  background-color: #eabb63;
+  transform: scale(1.05);
+}
+
+/*# sourceMappingURL=main.css.map */
