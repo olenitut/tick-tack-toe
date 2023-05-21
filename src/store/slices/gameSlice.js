@@ -70,7 +70,7 @@ const gameSlice = createSlice({
       state.board = state.steps[id].board;
       state.message = null;
       state.isPlaying = true;
-      state.player = state.steps[id].player;
+      state.player = state.steps[id].player === "O" ? "X" : "O";
     },
     restart(state) {
       state.board = initialBoard;
