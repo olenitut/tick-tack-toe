@@ -46,12 +46,6 @@ const gameSlice = createSlice({
         move: squareKey,
       };
       state.steps.push(newStep);
-      const isDraw = checkIsDraw(state.board);
-      if (isDraw) {
-        state.isPlaying = false;
-        state.message = `It's a draw! Click the restart button to start another game.`;
-        return;
-      }
 
       const hasWon = checkHasWon(state.board);
 
@@ -60,6 +54,13 @@ const gameSlice = createSlice({
         state.message = `Player ${state.player} has won! Click the restart button to start another game.`;
         return;
       }
+      const isDraw = checkIsDraw(state.board);
+      if (isDraw) {
+        state.isPlaying = false;
+        state.message = `It's a draw! Click the restart button to start another game.`;
+        return;
+      }
+
       state.player = state.player === "O" ? "X" : "O";
       state.message = null;
     },
